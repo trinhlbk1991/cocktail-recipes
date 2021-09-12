@@ -1,4 +1,4 @@
-package com.icedtealabs.cocktailrecipes
+package com.icedtealabs.newmoonboard
 
 import org.junit.Test
 

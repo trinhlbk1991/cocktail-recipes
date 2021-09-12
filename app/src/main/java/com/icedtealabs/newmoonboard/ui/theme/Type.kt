@@ -1,4 +1,4 @@
-package com.icedtealabs.cocktailrecipes.ui.theme
+package com.icedtealabs.newmoonboard.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
