@@ -1,4 +1,4 @@
-package com.icedtealabs.newmoonboard
+package com.icedtealabs.flip
 
 import org.junit.Test
 

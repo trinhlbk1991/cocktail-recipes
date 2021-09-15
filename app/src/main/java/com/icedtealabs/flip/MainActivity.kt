@@ -1,4 +1,4 @@
-package com.icedtealabs.newmoonboard
+package com.icedtealabs.flip
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -8,13 +8,13 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.icedtealabs.newmoonboard.ui.theme.NewMoonbardTheme
+import com.icedtealabs.flip.ui.theme.FlipTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            NewMoonbardTheme {
+            FlipTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
                     Greeting("Android")
@@ -32,7 +32,7 @@ fun Greeting(name: String) {
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    NewMoonbardTheme {
+    FlipTheme {
         Greeting("Android")
     }
 }

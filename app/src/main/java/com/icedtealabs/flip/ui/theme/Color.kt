@@ -1,4 +1,4 @@
-package com.icedtealabs.newmoonboard.ui.theme
+package com.icedtealabs.flip.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
