@@ -1,4 +1,4 @@
-package com.icedtealabs.flip.ui.home
+package com.icedtealabs.flip.ui.settings
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.wrapContentSize
@@ -12,10 +12,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 
 @Composable
-fun HomeScreen(
+fun SettingsScreen(
     // homeViewModel: HomeViewModel,
     // navigateToArticle: (String) -> Unit,
-    scaffoldState: ScaffoldState = rememberScaffoldState(),
+    scaffoldState: ScaffoldState = rememberScaffoldState()
 ) {
     // UiState of the HomeScreen
     // val uiState by homeViewModel.uiState.collectAsState()
@@ -27,7 +27,7 @@ fun HomeScreen(
     ) {
         item {
             Text(
-                text = "Home View",
+                text = "Settings View",
                 style = MaterialTheme.typography.body1
             )
         }

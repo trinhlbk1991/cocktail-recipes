@@ -7,7 +7,7 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.icedtealabs.newmoonboard"
+        applicationId "com.icedtealabs.flip"
         minSdk 21
         targetSdk 31
         versionCode 1
@@ -56,6 +56,8 @@ dependencies {
     implementation "androidx.compose.ui:ui:${versions.compose}"
     implementation "androidx.compose.material:material:${versions.compose}"
     implementation "androidx.compose.ui:ui-tooling-preview:${versions.compose}"
+    implementation "androidx.compose.material:material-icons-extended:${versions.compose}"
+
     implementation 'androidx.activity:activity-compose:1.4.0-alpha01'
     implementation 'androidx.navigation:navigation-compose:2.4.0-alpha08'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha07'
@@ -65,12 +67,12 @@ dependencies {
     implementation "com.google.accompanist:accompanist-systemuicontroller:${versions.accompanist_version}"
 
     implementation 'androidx.navigation:navigation-runtime-ktx:2.3.5'
-
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
 
     implementation "com.google.dagger:hilt-android:${versions.hilt}"
     implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03'
     kapt "com.google.dagger:hilt-android-compiler:${versions.hilt}"
+    implementation 'androidx.hilt:hilt-navigation-compose:1.0.0-alpha03'
 
     testImplementation 'junit:junit:4.13.2'
 

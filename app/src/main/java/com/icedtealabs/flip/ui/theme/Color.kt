@@ -2,7 +2,11 @@ package com.icedtealabs.flip.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple200 = Color(0xFFBB86FC)
-val Purple500 = Color(0xFF6200EE)
-val Purple700 = Color(0xFF3700B3)
-val Teal200 = Color(0xFF03DAC5)
+object FlipColors {
+    val Primary = Color(0xFFFEA857)
+    val Accent = Color(0xFFFEA857)
+    val TextPrimary = Color(0xFF573452)
+    val TextSecondary = Color(0xFFC7BBC7)
+    val Background = Color(0xFFFFF3EA)
+    val LightBackground = Color(0xFFDBD3DB)
+}

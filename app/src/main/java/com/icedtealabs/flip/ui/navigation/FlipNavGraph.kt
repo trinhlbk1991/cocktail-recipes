@@ -5,16 +5,22 @@ import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.hilt.navigation.compose.hiltNavGraphViewModel
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.icedtealabs.flip.ui.home.HomeScreen
-import kotlinx.coroutines.launch
+import com.icedtealabs.flip.ui.library.LibraryScreen
+import com.icedtealabs.flip.ui.library.LibraryViewModel
+import com.icedtealabs.flip.ui.settings.SettingsScreen
 
-object MainDestinations {
-    const val HOME_ROUTE = "home"
+object Routes {
+    const val HOME = "home"
+    const val LIBRARY = "library"
+    const val SETTINGS = "settings"
 }
 
 class MainActions(navController: NavHostController) {
@@ -30,7 +36,7 @@ class MainActions(navController: NavHostController) {
 fun FlipNavGraph(
     navController: NavHostController = rememberNavController(),
     scaffoldState: ScaffoldState = rememberScaffoldState(),
-    startDestination: String = MainDestinations.HOME_ROUTE,
+    startDestination: String = Routes.HOME,
 ) {
     val actions = remember(navController) { MainActions(navController) }
     val coroutineScope = rememberCoroutineScope()
@@ -39,7 +45,7 @@ fun FlipNavGraph(
         navController = navController,
         startDestination = startDestination
     ) {
-        composable(MainDestinations.HOME_ROUTE) {
+        composable(Routes.HOME) {
 //            val homeViewModel: HomeViewModel = viewModel(
 //                factory = HomeViewModel.provideFactory(appContainer.postsRepository)
 //            )
@@ -48,6 +54,13 @@ fun FlipNavGraph(
 //                navigateToArticle = actions.navigateToArticle,
 //                openDrawer = openDrawer
             )
+        }
+        composable(Routes.LIBRARY) {
+            val viewModel: LibraryViewModel = hiltViewModel()
+            LibraryScreen(viewModel = viewModel)
+        }
+        composable(Routes.SETTINGS) {
+            SettingsScreen()
         }
     }
 }
