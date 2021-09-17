@@ -1,5 +1,7 @@
 package com.icedtealabs.flip.ui.library
 
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.lazy.LazyColumn
@@ -12,6 +14,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import com.icedtealabs.flip.ui.library.view.CardSetUi
+import com.icedtealabs.flip.ui.theme.SPACE_16
 
 @Composable
 fun LibraryScreen(
@@ -29,7 +32,9 @@ fun LibraryScreen(
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
-            .wrapContentSize(Alignment.Center)
+            .wrapContentSize(Alignment.TopStart),
+        contentPadding = PaddingValues(SPACE_16),
+        verticalArrangement = Arrangement.spacedBy(SPACE_16),
     ) {
         when (state) {
             is LibraryState.LoadFailed -> {

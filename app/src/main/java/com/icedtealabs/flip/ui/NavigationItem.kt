@@ -17,4 +17,15 @@ sealed class NavigationItem(
     object Library : NavigationItem(Routes.LIBRARY, Icons.Rounded.LocalLibrary, "Library")
 
     object Settings : NavigationItem(Routes.SETTINGS, Icons.Rounded.Settings, "Settings")
+
+    companion object {
+        fun fromRoute(route: String): NavigationItem {
+            return when (route) {
+                Routes.HOME -> Home
+                Routes.LIBRARY -> Library
+                Routes.SETTINGS -> Settings
+                else -> Home
+            }
+        }
+    }
 }

@@ -13,18 +13,19 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.icedtealabs.flip.model.CardSet
 import com.icedtealabs.flip.ui.BottomNavigationBar
+import com.icedtealabs.flip.ui.theme.CARD_ELEVATION
+import com.icedtealabs.flip.ui.theme.SPACE_16
 
 @Composable
 fun CardSetUi(cardSet: CardSet) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(15.dp)
             .clickable { },
-        elevation = 10.dp
+        elevation = CARD_ELEVATION
     ) {
         Column(
-            modifier = Modifier.padding(15.dp)
+            modifier = Modifier.padding(SPACE_16)
         ) {
             Text(
                 text = cardSet.name,

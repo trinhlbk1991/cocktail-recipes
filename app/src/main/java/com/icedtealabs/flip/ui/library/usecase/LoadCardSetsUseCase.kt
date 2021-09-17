@@ -11,10 +11,10 @@ class LoadCardSetsUseCaseImpl @Inject constructor() : LoadCardSetsUseCase {
 
     override suspend fun invoke(): List<CardSet> {
         return listOf(
-            CardSet(id = "1", name = "Easy English"),
-            CardSet(id = "2", name = "Medium English"),
-            CardSet(id = "3", name = "Advanced English"),
-            CardSet(id = "4", name = "Advanced English 2"),
+            CardSet(id = "1", name = "Easy English", noCards = 11),
+            CardSet(id = "2", name = "Medium English", noCards = 11),
+            CardSet(id = "3", name = "Advanced English", noCards = 11),
+            CardSet(id = "4", name = "Advanced English 2", noCards = 11),
         )
     }
 
